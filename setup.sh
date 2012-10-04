@@ -1,10 +1,10 @@
-#!/binbash
+#!/bin/bash
 
-cd ../commotion-openwrt
+cd ../commotion-openwrt/openwrt
 
-if ! grep -q commotion-chat feeds.conf; then
+if ! grep -q commotionchat feeds.conf; then
   echo "adding commotion chat package feed..."
-  echo "src-link commotion-chat ../../../commotion-chat" >> feeds.conf
+  echo "src-link commotionchat ../../../commotion-chat" >> feeds.conf
 fi
 
 ./scripts/feeds update -a
