@@ -36,9 +36,11 @@ define Package/commotionchat/install
 	$(CP) -a ./luasrc/controller/commotionchat/* $(1)/usr/lib/lua/luci/controller/commotionchat/ 2>/dev/null || true
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/view/commotionchat
 	$(CP) -a ./luasrc/view/commotionchat/* $(1)/usr/lib/lua/luci/view/commotionchat/ 2>/dev/null || true
-
 	$(INSTALL_DIR) $(1)/www/luci-static/resources/
 	$(CP) -a ./htdocs/luci-static/* $(1)/www/luci-static/ 2>/dev/null || true
+endef
+
+define Package/commotionchat/postinst
 endef
 
 $(eval $(call BuildPackage,commotionchat))
