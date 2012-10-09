@@ -7,7 +7,7 @@ MODULE_NAME:=commotionchat
 MODULE_TITLE:=Commotion Chat
 
 PKG_NAME:=commotionchat
-PKG_VERSION:=0.0.1
+PKG_VERSION:=0.0.2
 PKG_RELEASE:=1
 PKG_BUILD_DIR:=$(BUILD_DIR)/$(PKG_NAME)-$(PKG_VERSION)
 
@@ -37,7 +37,7 @@ define Package/commotionchat/install
 	$(INSTALL_DIR) $(1)/usr/lib/lua/luci/view/commotionchat
 	$(CP) -a ./luasrc/view/commotionchat/* $(1)/usr/lib/lua/luci/view/commotionchat/ 2>/dev/null || true
 	$(INSTALL_DIR) $(1)/www/luci-static/resources/
-	$(CP) -a ./htdocs/luci-static/* $(1)/www/luci-static/ 2>/dev/null || true
+	$(CP) -a ./htdocs/luci-static/resources/* $(1)/www/luci-static/resources/ 2>/dev/null || true
 endef
 
 define Package/commotionchat/postinst

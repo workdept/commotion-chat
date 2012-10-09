@@ -1,6 +1,6 @@
 (function() {
   
-    /*
+    /* YUP!
   {
       //Protocol message type used by backend service
       "mt" : "XXXX",
